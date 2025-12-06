@@ -47,11 +47,13 @@ export function ImportantToday({ cases }: ImportantTodayProps) {
           return (
             <div
               key={caseItem.id}
-              className={`flex items-center justify-between p-3 rounded-lg bg-secondary/50 border border-border hover:border-gold/30 transition-all group ${
-                daysInfo.status === "overdue"
-                  ? "overdue-bg border-overdue/20 overdue-pulse"
-                  : ""
-              }`}
+              className={`flex items-center justify-between p-3 rounded-lg bg-secondary/50
+    border border-transparent shadow-sm hover:shadow-md
+    hover:border-gold/30 transition-all group ${
+      daysInfo.status === "overdue"
+        ? "overdue-bg border-overdue/30 overdue-pulse"
+        : ""
+    }`}
             >
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">

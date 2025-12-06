@@ -28,7 +28,7 @@ export function Sidebar() {
           </div>
           <div>
             <h1 className="font-display text-lg font-semibold text-gold">
-              MamanAdvakatura
+              Maman Advakatura
             </h1>
             <p className="text-xs text-muted-foreground">Кабинет адвоката</p>
           </div>
@@ -55,9 +55,13 @@ export function Sidebar() {
 
         {/* Footer */}
         <div className="border-t border-sidebar-border p-4">
-          <div className="rounded-lg bg-gold/5 border border-gold/20 p-3">
-            <p className="text-xs text-muted-foreground">Версия 1.0.0</p>
-            <p className="text-xs text-gold mt-1">Premium Edition</p>
+          <div className="rounded-lg bg-gold/5 border border-gold/20 p-3 text-center space-y-1">
+            <p className="text-xs text-muted-foreground tracking-tight">
+              © {new Date().getFullYear()} Все права защищены
+            </p>
+            <p className="text-xs font-medium text-gold">
+              Разработчик — Сарвар Калмуратов
+            </p>
           </div>
         </div>
       </div>

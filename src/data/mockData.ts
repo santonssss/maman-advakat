@@ -271,3 +271,122 @@ export const mockStatistics = {
     { month: "Декабрь", active: 12, completed: 8, overdue: 3 },
   ],
 };
+
+export interface ChatMessage {
+  id: string;
+  senderId: string;
+  senderName: string;
+  content: string;
+  timestamp: Date;
+  read: boolean;
+}
+
+export interface ChatContact {
+  id: string;
+  name: string;
+  role: string;
+  online: boolean;
+  lastMessage?: string;
+  unreadCount: number;
+}
+
+export const mockChatContacts: ChatContact[] = [
+  {
+    id: "2",
+    name: "Петров Сергей Иванович",
+    role: "Адвокат",
+    online: true,
+    lastMessage: "Добрый день! Как продвигается дело?",
+    unreadCount: 2,
+  },
+  {
+    id: "3",
+    name: "Козлова Ольга Николаевна",
+    role: "Адвокат",
+    online: false,
+    lastMessage: "Спасибо за документы",
+    unreadCount: 0,
+  },
+  {
+    id: "4",
+    name: "Смирнов Андрей Петрович",
+    role: "Старший партнёр",
+    online: true,
+    lastMessage: "Срочно нужна консультация",
+    unreadCount: 1,
+  },
+  {
+    id: "5",
+    name: "Иванова Мария Сергеевна",
+    role: "Адвокат",
+    online: false,
+    lastMessage: "Встреча перенесена на завтра",
+    unreadCount: 0,
+  },
+];
+
+export const mockChatMessages: Record<string, ChatMessage[]> = {
+  "2": [
+    {
+      id: "1",
+      senderId: "2",
+      senderName: "Петров С.И.",
+      content: "Добрый день! Как продвигается дело Иванова?",
+      timestamp: new Date(2024, 11, 5, 10, 30),
+      read: true,
+    },
+    {
+      id: "2",
+      senderId: "1",
+      senderName: "Вы",
+      content:
+        "Здравствуйте! Готовлю исковое заявление, планирую подать на следующей неделе.",
+      timestamp: new Date(2024, 11, 5, 10, 35),
+      read: true,
+    },
+    {
+      id: "3",
+      senderId: "2",
+      senderName: "Петров С.И.",
+      content: "Отлично! Есть какие-то сложности?",
+      timestamp: new Date(2024, 11, 5, 10, 40),
+      read: false,
+    },
+    {
+      id: "4",
+      senderId: "2",
+      senderName: "Петров С.И.",
+      content: "Если нужна помощь с документами, обращайтесь.",
+      timestamp: new Date(2024, 11, 5, 10, 41),
+      read: false,
+    },
+  ],
+  "3": [
+    {
+      id: "1",
+      senderId: "1",
+      senderName: "Вы",
+      content: "Отправил вам документы по делу Козлова",
+      timestamp: new Date(2024, 11, 4, 15, 0),
+      read: true,
+    },
+    {
+      id: "2",
+      senderId: "3",
+      senderName: "Козлова О.Н.",
+      content: "Спасибо за документы",
+      timestamp: new Date(2024, 11, 4, 16, 20),
+      read: true,
+    },
+  ],
+  "4": [
+    {
+      id: "1",
+      senderId: "4",
+      senderName: "Смирнов А.П.",
+      content: "Срочно нужна консультация по уголовному делу",
+      timestamp: new Date(2024, 11, 5, 9, 0),
+      read: false,
+    },
+  ],
+};
