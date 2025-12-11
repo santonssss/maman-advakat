@@ -256,3 +256,18 @@
     box-shadow: 0 0 15px 2px hsl(var(--overdue) / 0.3);
   }
 }
+@keyframes deadline-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+.deadline-critical {
+  animation: deadline-pulse 1.5s ease-in-out infinite;
+}

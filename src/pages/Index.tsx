@@ -1,6 +1,7 @@
 import { KPICards } from "@/components/dashboard/KPICards";
 import { ImportantToday } from "@/components/dashboard/ImportantToday";
 import { MiniCasesTable } from "@/components/dashboard/MiniCasesTable";
+import { WeeklyCalendar } from "@/components/dashboard/WeeklyCalendar";
 import { mockKPI, mockCases } from "@/data/mockData";
 
 const Index = () => {
@@ -18,6 +19,9 @@ const Index = () => {
 
       {/* KPI Cards */}
       <KPICards data={mockKPI} />
+
+      {/* Weekly Calendar */}
+      <WeeklyCalendar cases={mockCases} />
 
       {/* Two column layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

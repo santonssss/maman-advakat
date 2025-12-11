@@ -19,18 +19,18 @@ const navItems = [
 
 export function Sidebar() {
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-64 bg-sidebar border-r border-sidebar-border">
+    <aside className="fixed left-0 top-0 z-40 h-screen w-64 bg-sky-950 border-r border-sky-900">
       <div className="flex h-full flex-col">
         {/* Logo */}
-        <div className="flex h-16 items-center gap-3 border-b border-sidebar-border px-6">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10 border border-gold/30">
-            <Scale className="h-5 w-5 text-gold" />
+        <div className="flex h-16 items-center gap-3 border-b border-sky-900 px-6 bg-sky-950/95">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-sky-900/70 border border-sky-700">
+            <Scale className="h-5 w-5 text-sky-100" />
           </div>
           <div>
-            <h1 className="font-display text-lg font-semibold text-gold">
+            <h1 className="font-display text-lg font-semibold text-sky-50">
               Maman Advakatura
             </h1>
-            <p className="text-xs text-muted-foreground">Кабинет адвоката</p>
+            <p className="text-xs text-sky-200/70">Кабинет адвоката</p>
           </div>
         </div>
 
@@ -43,9 +43,9 @@ export function Sidebar() {
               end={item.to === "/"}
               className={cn(
                 "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
-                "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                "text-sky-100/75 hover:bg-sky-900/70 hover:text-sky-50"
               )}
-              activeClassName="sidebar-item-active bg-sidebar-accent text-sidebar-accent-foreground"
+              activeClassName="sidebar-item-active bg-sky-900/90 text-sky-50"
             >
               <item.icon className="h-5 w-5" />
               <span>{item.label}</span>
@@ -54,12 +54,12 @@ export function Sidebar() {
         </nav>
 
         {/* Footer */}
-        <div className="border-t border-sidebar-border p-4">
-          <div className="rounded-lg bg-gold/5 border border-gold/20 p-3 text-center space-y-1">
-            <p className="text-xs text-muted-foreground tracking-tight">
+        <div className="border-t border-sky-900 p-4">
+          <div className="rounded-lg bg-sky-900/70 border border-sky-800 p-3 text-center space-y-1">
+            <p className="text-xs text-sky-200/75 tracking-tight">
               © {new Date().getFullYear()} Все права защищены
             </p>
-            <p className="text-xs font-medium text-gold">
+            <p className="text-xs font-medium text-sky-50">
               Разработчик — Сарвар Калмуратов
             </p>
           </div>

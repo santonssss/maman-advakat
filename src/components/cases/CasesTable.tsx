@@ -58,7 +58,7 @@ export function CasesTable({ cases }: CasesTableProps) {
                   }`}
                 >
                   <td className="py-4 px-4">
-                    <span className="text-sm font-semibold text-gold">
+                    <span className="text-sm font-semibold text-black">
                       {caseItem.number}
                     </span>
                   </td>
@@ -103,7 +103,11 @@ export function CasesTable({ cases }: CasesTableProps) {
                   </td>
                   <td className="py-4 px-4 text-right">
                     <Link to={`/cases/${caseItem.id}`}>
-                      <Button variant="gold-outline" size="sm">
+                      <Button
+                        variant="gold-outline"
+                        className="text-black"
+                        size="sm"
+                      >
                         Открыть
                         <ExternalLink className="h-3 w-3 ml-1" />
                       </Button>

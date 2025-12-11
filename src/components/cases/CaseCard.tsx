@@ -78,7 +78,7 @@ export function CaseCard({ caseItem }: CaseCardProps) {
             : `Осталось ${daysLeft} дн.`}
         </div>
         <Link to={`/cases/${caseItem.id}`}>
-          <Button variant="gold-outline" size="sm">
+          <Button variant="gold-outline" className="text-black" size="sm">
             Открыть
             <ArrowRight className="h-3 w-3 ml-1" />
           </Button>
