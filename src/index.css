@@ -114,10 +114,10 @@
   --sidebar-border: hsl(220 15% 20%);
   --sidebar-ring: hsl(45 72% 50%);
 
-  --gold: hsl(45 72% 42%);
-  --gold-light: hsl(45 60% 55%);
-  --gold-dark: hsl(45 72% 30%);
-  --gold-glow: hsl(45 100% 50%);
+  --gold: hsl(0, 0%, 0%);
+  --gold-light: hsl(0, 0%, 0%);
+  --gold-dark: hsl(0, 0%, 0%);
+  --gold-glow: hsl(0, 0%, 0%);
 
   --graphite: hsl(220 15% 12%);
   --graphite-light: hsl(220 12% 18%);

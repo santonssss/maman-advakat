@@ -6,7 +6,12 @@ interface KPICardsProps {
 }
 
 const cards = [
-  { key: "activeCases", label: "Активных дел", icon: Briefcase, color: "gold" },
+  {
+    key: "activeCases",
+    label: "Активных дел",
+    icon: Briefcase,
+    color: "black",
+  },
   {
     key: "overdueCases",
     label: "Просроченных",
